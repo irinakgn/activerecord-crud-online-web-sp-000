@@ -54,8 +54,12 @@ def can_find_by_multiple_attributes
   # title == "Title"
   # release_date == 2000
   # director == "Me"
+<<<<<<< HEAD
   movies = Movie.where({:title => "Title", :release_date => 2000, :director => "Me"})
   movies[0]
+=======
+  items = Movie.where({:title => "Title", :release_date => 2000, :director => "Me"})
+>>>>>>> dfdf53e61720a6751b96cffd32cb69dd501d0a2a
 end
 
 def can_find_using_where_clause_and_be_sorted
@@ -85,7 +89,11 @@ def can_update_multiple_items_at_once
   5.times do |i|
     Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
+<<<<<<< HEAD
   Movie.update_all({title: 'A Movie'})
+=======
+  Movie.update_all
+>>>>>>> dfdf53e61720a6751b96cffd32cb69dd501d0a2a
 end
 
 def can_destroy_a_single_item
